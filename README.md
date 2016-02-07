@@ -9,3 +9,4 @@ To upload stuff using SourceTree client
 	3. "Stage" all files by checking the check box in "Unstaged files"
 	4. Write a comment.
 	5. Click "Commit."
+	6. Click "Push" on the toolbar. Enter credentials.
