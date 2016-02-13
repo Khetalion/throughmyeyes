@@ -41,6 +41,8 @@ public class Player : MonoBehaviour {
 		rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
 		
 		transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
+
+
 	}
 
 	void FixedUpdate()
