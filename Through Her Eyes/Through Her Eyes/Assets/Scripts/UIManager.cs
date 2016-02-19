@@ -28,7 +28,7 @@ public class UIManager : MonoBehaviour
             pauseSwitch();
         }
 	}
-
+    // Pauses
     private void gamePaused(bool state)
     {
         if(state)
