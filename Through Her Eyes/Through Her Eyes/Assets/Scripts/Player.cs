@@ -19,17 +19,18 @@ public class Player : MonoBehaviour {
 	void Awake () {
         cc = GetComponent<CharacterController>();
 
-		Cursor.visible = false;
-		Cursor.lockState = CursorLockMode.Locked;
+		//Cursor.visible = false;
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		Cursor.lockState = CursorLockMode.None;
+		Cursor.lockState = CursorLockMode.Locked;
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 		float mX = Input.GetAxis ("Mouse X");
 		float mY = Input.GetAxis ("Mouse Y");
-
 		//Debug.Log (mX + ", " + mY);
 		//transform.Rotate ((transform.up * mX + -transform.right * mY) * 2f);
 		//transform.Rotate (transform.right * mY * 2f);
