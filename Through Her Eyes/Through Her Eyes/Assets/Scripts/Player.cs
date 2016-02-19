@@ -18,15 +18,10 @@ public class Player : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
         cc = GetComponent<CharacterController>();
-
-		Cursor.visible = false;
-
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		Cursor.lockState = CursorLockMode.None;
-		Cursor.lockState = CursorLockMode.Locked;
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 		float mX = Input.GetAxis ("Mouse X");

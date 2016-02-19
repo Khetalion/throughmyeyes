@@ -23,7 +23,7 @@ public class UIManager : MonoBehaviour
         {
             gamePaused(false);
         }
-        if(Input.GetButtonDown("Cancel"))
+        if(Input.GetButtonDown("Menu"))
         {
             pauseSwitch();
         }
@@ -33,10 +33,14 @@ public class UIManager : MonoBehaviour
     {
         if(state)
         {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0.0f;
         }
         else
         {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
             Time.timeScale = 1.0f;
         }
         PausePanel.SetActive(state);
@@ -52,5 +56,10 @@ public class UIManager : MonoBehaviour
         {
             paused = true;
         }
+    }
+
+    public void LoadLevel(string level)
+    {
+        Application.LoadLevel(level);
     }
 }
