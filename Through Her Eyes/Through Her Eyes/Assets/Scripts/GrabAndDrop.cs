@@ -70,7 +70,7 @@ public class GrabAndDrop : MonoBehaviour {
 		if (grabbedObject != null)
 		{
 			Vector3 newPosition = gameObject.transform.position + 
-				Camera.main.transform.forward * grabbedObjectSize;
+				gameObject.transform.forward * grabbedObjectSize;
 			grabbedObject.transform.position = newPosition;
 		}
 	}

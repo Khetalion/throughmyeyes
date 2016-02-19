@@ -19,7 +19,7 @@ public class Player : MonoBehaviour {
 	void Awake () {
         cc = GetComponent<CharacterController>();
 
-		//Cursor.visible = false;
+		Cursor.visible = false;
 
 	}
 	
