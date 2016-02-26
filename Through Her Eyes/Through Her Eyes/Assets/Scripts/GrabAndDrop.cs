@@ -6,17 +6,19 @@ public class GrabAndDrop : MonoBehaviour {
 	[Range(1,7)]
 	public float range = 3.0f;
 	GameObject grabbedObject;
+	GameObject highlighted;
 	float grabbedObjectSize;
 
-	GameObject GetMouseOverObject()
+	GameObject GetHoverObject()
 	{
 		Vector3 position = gameObject.transform.position;
 		RaycastHit rch;
-		Vector3 target = position + Camera.main.transform.forward * range;
+		Vector3 target = Camera.main.transform.position + Camera.main.transform.forward * range;
 
 		if (Physics.Linecast (position, target, out rch)) 
 		{
-			return rch.collider.gameObject;
+			GameObject go = rch.collider.gameObject;
+			return go;
 		}
 		return null;
 	}
@@ -34,7 +36,9 @@ public class GrabAndDrop : MonoBehaviour {
 
 	bool CanGrab(GameObject obj)
 	{
-		return (obj.GetComponent<Rigidbody>() != null);
+		if(obj.GetComponent<Rigidbody>() == null)
+			return false;
+		return true;
 	}
 
 	void DropObject()
@@ -59,7 +63,7 @@ public class GrabAndDrop : MonoBehaviour {
 		{
 			if (grabbedObject == null) 
 			{
-				TryGrabObject (GetMouseOverObject ());
+				TryGrabObject (GetHoverObject ());
 			} 
 			else 
 			{
