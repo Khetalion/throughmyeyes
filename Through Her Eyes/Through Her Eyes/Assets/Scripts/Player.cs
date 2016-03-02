@@ -49,7 +49,6 @@ public class Player : MonoBehaviour {
 				GameObject go = hit.collider.gameObject;
 				if (go.GetComponent<Grabable> () != null) {
 					go.GetComponent<Grabable> ().Hover ();
-
 					if (Input.GetMouseButtonDown (0)) {
 						grabbedObject = go;
 						grabbedObject.GetComponent<Collider>().enabled = false;
