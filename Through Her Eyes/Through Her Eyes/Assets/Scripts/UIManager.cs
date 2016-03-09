@@ -4,7 +4,9 @@ using System.Collections;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject PausePanel;
+	public GameObject PausePanel;
+	public GameObject DebugPanel;
+	public GameObject SpotPanel;
     public bool paused;
 	// Use this for initialization
 	void Start ()
@@ -26,8 +28,17 @@ public class UIManager : MonoBehaviour
         if(Input.GetButtonDown("Menu"))
         {
             pauseSwitch();
-        }
+		}
+
+		// Spot Handler
+		int spot;
+		//SpotPanel.transform.FindChild(
+
+		// Debug Handler
+		DebugPanel.SetActive (Input.GetButton("Debug"));
+		DebugPanel.transform.FindChild ("Spot Intensity").GetComponent<Text> ().text = "Spot Intensity: " + 1;
 	}
+
     // Pauses
     private void gamePaused(bool state)
     {
