@@ -53,7 +53,13 @@ public class Player : MonoBehaviour {
 						grabbedObject = go;
 						grabbedObject.GetComponent<Collider>().enabled = false;
 						grabbedObject.GetComponent<Rigidbody>().useGravity = false;
-						grabbedObject.GetComponent<Rigidbody> ().Sleep ();
+						grabbedObject.GetComponent<Rigidbody>().Sleep ();
+					}
+				}
+				// For interact objectives
+				else if(go.GetComponent<Interactable>() != null){
+					if(Input.GetMouseButtonDown(0)){
+						go.GetComponent<Interactable>().interacted = true;
 					}
 				}
 			}
