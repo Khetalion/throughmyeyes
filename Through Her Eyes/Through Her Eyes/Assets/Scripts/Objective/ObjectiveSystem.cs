@@ -48,9 +48,8 @@ public class ObjectiveSystem : MonoBehaviour{
 
 	void AddToUI(Objective o)
 	{
-		Debug.Log ("Here");
 		GameObject go = Instantiate(UIObjectPrefab);
-		Vector3 mod = new Vector3 (0, -counter * 15, 0);
+		Vector3 mod = new Vector3 (0, -counter * 40, 0);
 		go.name = o.gameObject.name;
 		go.transform.FindChild("Text").GetComponent<Text>().text = o.description;
 		go.transform.SetParent(ObjectivePanel.transform, false);
