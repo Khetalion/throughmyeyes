@@ -1,15 +1,15 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Objective/Interact.cs">
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UIManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GrabAndDrop.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/UIManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Grabable.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/MainMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Objective/Interact.cs" Line="6" Column="21" />
-      <File FileName="Assets/Scripts/Objective/Place.cs" Line="15" Column="29" />
-      <File FileName="Assets/Scripts/Objective/Objective.cs" Line="7" Column="22" />
+      <File FileName="Assets\Scripts\UIManager.cs" Line="55" Column="35" />
+      <File FileName="Assets\Scripts\Player.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GrabAndDrop.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Grabable.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MainMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Objective\Interact.cs" Line="6" Column="21" />
+      <File FileName="Assets\Scripts\Objective\Place.cs" Line="15" Column="29" />
+      <File FileName="Assets\Scripts\Objective\Objective.cs" Line="7" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

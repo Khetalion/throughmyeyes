@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class UIManager : MonoBehaviour
@@ -47,6 +48,14 @@ public class UIManager : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0.0f;
+            if(Input.GetKey("down"))
+            {
+                SceneManager.LoadScene("MainMenu");
+            }
+            else if(Input.GetKey("up"))
+            {
+                paused = false;
+            }
         }
         else
         {
@@ -69,8 +78,8 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void LoadLevel(string level)
-    {
-        Application.LoadLevel(level);
-    }
+    //public void LoadLevel(string level)
+    //{
+    //    Application.LoadLevel(level);
+    //}
 }
